@@ -71,6 +71,7 @@ namespace RSPGameApp
 
             AnsiConsole.Markup("[green]Press any key to return...[/]");
             Console.ReadKey();
+
         }
 
         public void ShowWinRate()
@@ -89,7 +90,7 @@ namespace RSPGameApp
 
         private string GetComputerMove()
         {
-            var moves = new[] { "Rock", "Scissors", "Paper" };
+            var moves = new[] { "Rock", "Scissors", "paper" };
             Random random = new Random();
             return moves[random.Next(moves.Length)];
         }
