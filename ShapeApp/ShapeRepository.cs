@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ClassLibrary.Models;
 using ClassLibrary.Data;
+using ShapeApp; 
+
 
 
 namespace ShapeApp
@@ -24,7 +26,7 @@ namespace ShapeApp
                 CalculationDate = DateTime.Now
             };
             _context.ShapeRecords.Add(record);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
         }
 
         public List<ShapeRecord> GetAllShapes()
